@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Promise Tracker - ECPv5.1.2.1//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Promise Tracker
+X-ORIGINAL-URL:https://promisetracker.org
+X-WR-CALDESC:Events for Promise Tracker
+END:VCALENDAR

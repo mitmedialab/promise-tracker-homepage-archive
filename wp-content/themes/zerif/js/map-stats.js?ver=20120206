@@ -1,0 +1,19 @@
+function loadMapStats() {
+	jQuery.getJSON('http://emreiser.cartodb.com/api/v2/sql/?q=select%20sum(number_of_participants)%20from%20monitorando_workshops', function(data) {
+         jQuery("#participant-count").html(data.rows[0].sum)
+      });
+
+      jQuery.getJSON('http://emreiser.cartodb.com/api/v2/sql/?q=select%20count(city)%20from%20monitorando_workshops', function(data) {
+         jQuery("#workshop-count").html(data.rows[0].count)
+      });
+
+      jQuery.getJSON('http://emreiser.cartodb.com/api/v2/sql/?q=select%20count(distinct%20city)%20from%20monitorando_workshops', function(data) {
+         jQuery("#city-count").html(data.rows[0].count)
+      });
+
+      jQuery.getJSON('http://emreiser.cartodb.com/api/v2/sql/?q=select%20sum(number_of_campaigns)%20from%20monitorando_workshops', function(data) {
+         jQuery("#campaign-count").html(data.rows[0].sum)
+      });
+};
+
+loadMapStats();

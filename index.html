@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Promise Tracker | Data Collection for Civic Action</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="pingback" href="https://promisetracker.org/xmlrpc.php">
+
+<!--[if lt IE 9]>
+<script src="https://promisetracker.org/wp-content/themes/zerif/js/html5.js"></script>
+<link rel="stylesheet" href="https://promisetracker.org/wp-content/themes/zerif/css/ie.css" type="text/css">
+<![endif]-->
+
+<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Promise Tracker &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Promise Tracker &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="text/calendar" title="Promise Tracker &raquo; iCal Feed" href="events/index.html%3Fical=1" />
+	<script type="text/javascript">
+		var ajaxurl = 'https://promisetracker.org/wp-admin/admin-ajax.php';
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/promisetracker.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='userlist-style-css'  href='wp-content/plugins/wp-users-list-widget/css/style.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-common-skeleton-style-css'  href='wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css%3Fver=4.12.3.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-tooltip-css'  href='wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css%3Fver=4.12.3.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-blog-designer-fontawesome-stylesheets-css'  href='wp-content/plugins/blog-designer/css/fontawesome-all.min.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-blog-designer-css-stylesheets-css'  href='wp-content/plugins/blog-designer/css/designer_css.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='wp-content/plugins/jquery-collapse-o-matic/light_style.css%3Fver=1.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font-css'  href='https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C400italic%7CMontserrat%3A700%7CHomemade+Apple&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_font_all-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C300italic%2C400italic%2C600italic%2C600%2C700%2C700italic%2C800%2C800italic&amp;ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_bootstrap_style-css'  href='wp-content/themes/zerif/css/bootstrap.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_fontawesome-css'  href='wp-content/themes/zerif/css/font-awesome.min.css%3Fver=v1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_pixeden_style-css'  href='wp-content/themes/zerif/css/pixeden-icons.css%3Fver=v1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_style-css'  href='wp-content/themes/zerif/style.css%3Fver=v1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zerif_responsive_style-css'  href='wp-content/themes/zerif/css/responsive.css%3Fver=v1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dry_awp_theme_style-css'  href='wp-content/plugins/advanced-wp-columns/assets/css/awp-columns.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tmm-css'  href='wp-content/plugins/team-members/inc/css/tmm_style.css%3Fver=5.4.2.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js%3Fver=1.12.4-wp'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/plugins/blog-designer/js/designer.js%3Fver=5.4.2'></script>
+<link rel='https://api.w.org/' href='wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.2" />
+<style type="text/css" id="tve_global_variables">:root{}</style><script src='https://wordpress.brownbag.me/?dm=92dfdf7b65c23102d23f0f69d602eef7&amp;action=load&amp;blogid=13&amp;siteid=1&amp;t=202057917&amp;back=https%3A%2F%2Fpromisetracker.org%2F' type='text/javascript'></script><link rel="alternate" href="index.html" hreflang="en" />
+<link rel="alternate" href="pt/index.html" hreflang="pt" />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://promisetracker.org"><link rel="https://theeventscalendar.com/" href="wp-json/tribe/events/v1/index.html" /><!-- All in one Favicon 4.7 --><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("wp-content/uploads/sites/13/2016/09/20160913_163457.jpg"); background-position: center top; background-size: contain; background-repeat: no-repeat; background-attachment: scroll; }
+</style>
+	<style type="text/css" id="thrive-default-styles"></style><link rel="icon" href="wp-content/uploads/sites/13/2015/06/cropped-PT-logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="wp-content/uploads/sites/13/2015/06/cropped-PT-logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="wp-content/uploads/sites/13/2015/06/cropped-PT-logo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://promisetracker.org/wp-content/uploads/sites/13/2015/06/cropped-PT-logo-270x270.png" />
+
+</head>
+
+
+
+
+	<body class="home blog custom-background tribe-no-js group-blog" >
+
+
+
+
+<header id="home" class="header">
+
+	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+
+		<div class="container">
+
+			<div class="navbar-header responsive-logo">
+
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+
+				<span class="sr-only">Toggle navigation</span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				<span class="icon-bar"></span>
+
+				</button>
+
+
+
+				<a href="index.html" class="navbar-brand"><img src="wp-content/uploads/sites/13/2015/06/PT-logo.png" alt="Promise Tracker"></a>		<h2 class="site-title">Promise Tracker</h2>
+
+
+			</div>
+
+			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
+
+				<ul id="menu-menu-1" class="nav navbar-nav navbar-right responsive-nav main-nav-list"><li id="menu-item-244" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-244"><a href="index.html" aria-current="page">about</a></li>
+<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a href="index.html%3Fp=2.html">news</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="http://monitor.promisetracker.org/users/sign_up?locale=en">create an account</a></li>
+<li id="menu-item-289" class="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-289"><a href="index.html#pll_switcher"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English" width="16" height="11" /></a>
+<ul class="sub-menu">
+	<li class="lang-item lang-item-15 lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom current_page_item menu-item-home menu-item-289-en"><a href="index.html" hreflang="en-US" lang="en-US"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHzSURBVHjaYkxOP8IAB//+Mfz7w8Dwi4HhP5CcJb/n/7evb16/APL/gRFQDiAAw3JuAgAIBEDQ/iswEERjGzBQLEru97ll0g0+3HvqMn1SpqlqGsZMsZsIe0SICA5gt5a/AGIEarCPtFh+6N/ffwxA9OvP/7//QYwff/6fZahmePeB4dNHhi+fGb59Y4zyvHHmCEAAAW3YDzQYaJJ93a+vX79aVf58//69fvEPlpIfnz59+vDhw7t37968efP3b/SXL59OnjwIEEAsDP+YgY53b2b89++/awvLn98MDi2cVxl+/vl6mituCtBghi9f/v/48e/XL86krj9XzwEEEENy8g6gu22rfn78+NGs5Ofr16+ZC58+fvyYwX8rxOxXr169fPny+fPn1//93bJlBUAAsQADZMEBxj9/GBxb2P/9+S/R8u3vzxuyaX8ZHv3j8/YGms3w8ycQARmi2eE37t4ACCDGR4/uSkrKAS35B3TT////wADOgLOBIaXIyjBlwxKAAGKRXjCB0SOEaeu+/y9fMnz4AHQxCP348R/o+l+//sMZQBNLEvif3AcIIMZbty7Ly6t9ZmXl+fXj/38GoHH/UcGfP79//BBiYHjy9+8/oUkNAAHEwt1V/vI/KBY/QSISFqM/GBg+MzB8A6PfYC5EFiDAABqgW776MP0rAAAAAElFTkSuQmCC" title="English" alt="English" width="16" height="11" /></a></li>
+</ul>
+</li>
+</ul>
+			</nav>
+
+		</div>
+
+	</div>
+
+	<!-- / END TOP BAR -->
+
+
+<div class="header-content-wrap"><div class="container"><h1 class="intro-text">Promise Tracker</h1><h2 class="intro-sub-text">Data Collection for Civic Action</h2></div></div><!-- .header-content-wrap --><div class="clear"></div>
+
+</header> <!-- / END HOME SECTION  -->
+
+
+<div id="content" class="site-content">
+
+
+
+				
+		<section class="latest-news" id="latestnews">
+			<div class="container">
+
+				<!-- SECTION HEADER -->
+				<div class="section-header">
+				<h2 class="dark-text">Latest news</h2>				</div>
+
+
+				<div class="clear"></div>
+				<div id="carousel-homepage-latestnews" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+				
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+
+					<div class="item active">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=306.html" title="Students take Brasília">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2018/01/Screen-Shot-2018-01-08-at-19.22.23-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2018/01/Screen-Shot-2018-01-08-at-19.22.23-250x250.png 250w, wp-content/uploads/sites/13/2018/01/Screen-Shot-2018-01-08-at-19.22.23-150x150.png 150w, wp-content/uploads/sites/13/2018/01/Screen-Shot-2018-01-08-at-19.22.23-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=306.html" title="Students take Brasília">Students take Brasília</a></h5>
+
+										<p>On December 8th, I had the honor of joining nearly 800 students, teachers and public figures in Brasília for an incredible showcase of youth leadership in citizen oversight and community stewardship. The event was the final prize ceremony for the<a href="index.html%3Fp=306.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=293.html" title="Student Audit project launches in Belo Horizonte">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/10/BH-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/10/BH-250x250.jpg 250w, wp-content/uploads/sites/13/2017/10/BH-150x150.jpg 150w, wp-content/uploads/sites/13/2017/10/BH-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=293.html" title="Student Audit project launches in Belo Horizonte">Student Audit project launches in Belo Horizonte</a></h5>
+
+										<p>Last week Belo Horizonte&#8217;s City Hall launched a new Student Audit project designed by the Comptroller General&#8217;s Office of the municipality in collaboration with Secretary of Education and the Comptroller General&#8217;s Office of the Federal District.  Inspired by the School Audit launched in<a href="index.html%3Fp=293.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=266.html" title="Santarém school lunch monitoring featured in Porvir">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/09/Screen-Shot-2017-09-26-at-12.04.11-PM-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/09/Screen-Shot-2017-09-26-at-12.04.11-PM-250x250.png 250w, wp-content/uploads/sites/13/2017/09/Screen-Shot-2017-09-26-at-12.04.11-PM-150x150.png 150w, wp-content/uploads/sites/13/2017/09/Screen-Shot-2017-09-26-at-12.04.11-PM-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=266.html" title="Santarém school lunch monitoring featured in Porvir">Santarém school lunch monitoring featured in Porvir</a></h5>
+
+										<p>We were proud to see our partners at Project SOL and the Student Movement Pact for Education in Pará featured in a new focus section published by Porvir on student participation in schools. Porvir, which focuses on innovation in education in Brazil,<a href="index.html%3Fp=266.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=255.html" title="Civic Audit to launch in 100 schools in Brasília">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/08/CivicAudit-1-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/08/CivicAudit-1-250x250.png 250w, wp-content/uploads/sites/13/2017/08/CivicAudit-1-150x150.png 150w, wp-content/uploads/sites/13/2017/08/CivicAudit-1-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=255.html" title="Civic Audit to launch in 100 schools in Brasília">Civic Audit to launch in 100 schools in Brasília</a></h5>
+
+										<p>Today the Comptroller General of the Federal District in Brazil is launching the first School Attitude Prize, with the goal of fostering civic awareness and a culture of citizen oversight in public schools. As part of the process, students from<a href="index.html%3Fp=255.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=234.html" title="Celebrating Phase II in Belém">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-11.27.29-AM-250x250.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-11.27.29-AM-250x250.jpeg 250w, wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-11.27.29-AM-150x150.jpeg 150w, wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-11.27.29-AM-174x174.jpeg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=234.html" title="Celebrating Phase II in Belém">Celebrating Phase II in Belém</a></h5>
+
+										<p>During the last week of June, the Promise Tracker team gathered in Belém for a series of events to celebrate the incredible work achieved by our partners in Pará during Phase II of the project. Technology, Transparency and Citizen Oversight: Developing<a href="index.html%3Fp=234.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=249.html" title="Participatory Design Workshop: Promise Tracker 2.0">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-12.04.17-PM-250x250.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-12.04.17-PM-250x250.jpeg 250w, wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-12.04.17-PM-150x150.jpeg 150w, wp-content/uploads/sites/13/2017/07/WhatsApp-Image-2017-06-27-at-12.04.17-PM-174x174.jpeg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=249.html" title="Participatory Design Workshop: Promise Tracker 2.0">Participatory Design Workshop: Promise Tracker 2.0</a></h5>
+
+										<p>As part of our recent trip to Belém to share the work of our partners throughout Phase II of the project, we held a design workshop we with over 30 university and high school students from Belém and Santarém that have<a href="index.html%3Fp=249.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=223.html" title="Initial findings from Pará">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/05/Summary_Cover_horizontal-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/05/Summary_Cover_horizontal-250x250.png 250w, wp-content/uploads/sites/13/2017/05/Summary_Cover_horizontal-150x150.png 150w, wp-content/uploads/sites/13/2017/05/Summary_Cover_horizontal-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=223.html" title="Initial findings from Pará">Initial findings from Pará</a></h5>
+
+										<p>This month we’re excited to be sharing initial findings from the Phase II Promise Tracker case studies, developed over the past year with partners at the University of São Paulo’s Colaboratory for Development and Participation (Colab-USP). With support from Humanitas360,<a href="index.html%3Fp=223.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=203.html" title="University students take monitoring into public high schools">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/02/Screen-Shot-2017-02-01-at-10.52.35-AM-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/02/Screen-Shot-2017-02-01-at-10.52.35-AM-250x250.png 250w, wp-content/uploads/sites/13/2017/02/Screen-Shot-2017-02-01-at-10.52.35-AM-150x150.png 150w, wp-content/uploads/sites/13/2017/02/Screen-Shot-2017-02-01-at-10.52.35-AM-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=203.html" title="University students take monitoring into public high schools">University students take monitoring into public high schools</a></h5>
+
+										<p>Over the past 2 weeks, 98 public accounting students at the Federal University of Pará (UFPA) visited 15 public high schools across the city of Belém to launch an unprecedented pilot program to monitor the quality of school lunches. Over<a href="index.html%3Fp=203.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=194.html" title="Partners Summit in São Paulo">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2017/01/IMG-20170124-WA0000-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2017/01/IMG-20170124-WA0000-250x250.jpg 250w, wp-content/uploads/sites/13/2017/01/IMG-20170124-WA0000-150x150.jpg 150w, wp-content/uploads/sites/13/2017/01/IMG-20170124-WA0000-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=194.html" title="Partners Summit in São Paulo">Partners Summit in São Paulo</a></h5>
+
+										<p>Last week in São Paulo, we gathered the incredible group of partners that have been working on the Phase 2 pilot of Promise Tracker in order to share learnings from the past year and discuss next steps for the project.<a href="index.html%3Fp=194.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=189.html" title="Learning from partners in Pará">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2016/11/WhatsApp-Image-2016-11-07-at-8.45.51-AM-250x250.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2016/11/WhatsApp-Image-2016-11-07-at-8.45.51-AM-250x250.jpeg 250w, wp-content/uploads/sites/13/2016/11/WhatsApp-Image-2016-11-07-at-8.45.51-AM-150x150.jpeg 150w, wp-content/uploads/sites/13/2016/11/WhatsApp-Image-2016-11-07-at-8.45.51-AM-174x174.jpeg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=189.html" title="Learning from partners in Pará">Learning from partners in Pará</a></h5>
+
+										<p>We made a second trip to the state of Pará this month to follow up on school lunch monitoring campaigns and interview a range of different actors to learn more about their experience using Promise Tracker. Over the course of<a href="index.html%3Fp=189.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=180.html" title="Citizen audit at the Federal University of Pará">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2016/09/20160912_183753-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2016/09/20160912_183753-250x250.jpg 250w, wp-content/uploads/sites/13/2016/09/20160912_183753-150x150.jpg 150w, wp-content/uploads/sites/13/2016/09/20160912_183753-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=180.html" title="Citizen audit at the Federal University of Pará">Citizen audit at the Federal University of Pará</a></h5>
+
+										<p>At the start of the semester, accounting students in two courses at the Federal University of Pará teamed up with a unusual set of partners to develop proposals for civic audits using Promise Tracker. As part of their final course<a href="index.html%3Fp=180.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=164.html" title="A visit to the student movement in Santarém">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2016/09/20160913_163457-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2016/09/20160913_163457-250x250.jpg 250w, wp-content/uploads/sites/13/2016/09/20160913_163457-150x150.jpg 150w, wp-content/uploads/sites/13/2016/09/20160913_163457-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=164.html" title="A visit to the student movement in Santarém">A visit to the student movement in Santarém</a></h5>
+
+										<p>This week we had the honor of meeting leaders of the impressive student movement Pact for Education in Pará, who have been monitoring school lunches using Promise Tracker over the past several months. The movement was born in October of<a href="index.html%3Fp=164.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=151.html" title="Monitoring school lunch in Pará">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2016/08/Merenda_gallery-2-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2016/08/Merenda_gallery-2-250x250.png 250w, wp-content/uploads/sites/13/2016/08/Merenda_gallery-2-150x150.png 150w, wp-content/uploads/sites/13/2016/08/Merenda_gallery-2-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=151.html" title="Monitoring school lunch in Pará">Monitoring school lunch in Pará</a></h5>
+
+										<p>On June 21st, middle and high school students in Brazil’s northern city of Santarém took to the streets in the city center to raise awareness about a crisis with school lunches. The event was organized by the Student Pact for<a href="index.html%3Fp=151.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=145.html" title="Kicking off a new pilot to assess impact">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2016/05/Ilheus-colab-250x250.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2016/05/Ilheus-colab-250x250.jpeg 250w, wp-content/uploads/sites/13/2016/05/Ilheus-colab-150x150.jpeg 150w, wp-content/uploads/sites/13/2016/05/Ilheus-colab-174x174.jpeg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=145.html" title="Kicking off a new pilot to assess impact">Kicking off a new pilot to assess impact</a></h5>
+
+										<p>We are very excited to announce a new partnership with Humanitas360 that will support a second pilot phase of Promise Tracker in Brazil starting this month! Over the course of 2015, we had the opportunity to work with Nossa São<a href="index.html%3Fp=145.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=157.html" title="Project Case Study by DataShift">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2016/09/Promise-tracker-case-study-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2016/09/Promise-tracker-case-study-250x250.jpg 250w, wp-content/uploads/sites/13/2016/09/Promise-tracker-case-study-150x150.jpg 150w, wp-content/uploads/sites/13/2016/09/Promise-tracker-case-study-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=157.html" title="Project Case Study by DataShift">Project Case Study by DataShift</a></h5>
+
+										<p>We were excited to see the following case study of Promise Tracker written up by DataShift. DataShift is an initiative of CIVICUS in partnership with the engine room and Wingu that aims to build the capacity of civil society to produce and use citizen-generated<a href="index.html%3Fp=157.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=130.html" title="Citizen sensing: Mapping data on sound levels in Boston">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/11/Screen-Shot-2015-11-02-at-5.26.31-PM-250x250.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/11/Screen-Shot-2015-11-02-at-5.26.31-PM-250x250.png 250w, wp-content/uploads/sites/13/2015/11/Screen-Shot-2015-11-02-at-5.26.31-PM-150x150.png 150w, wp-content/uploads/sites/13/2015/11/Screen-Shot-2015-11-02-at-5.26.31-PM-174x174.png 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=130.html" title="Citizen sensing: Mapping data on sound levels in Boston">Citizen sensing: Mapping data on sound levels in Boston</a></h5>
+
+										<p>Over the past month, our team has been developing the first prototype for integrating low-cost mobile sensors into the Promise Tracker platform to expand the range of information that citizens can collect and map with our toolset. We are excited to work with<a href="index.html%3Fp=130.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=91.html" title="Citizens &#038; City Hall Monitor Sanitation in Belém">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/08/20150812_161557-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/08/20150812_161557-250x250.jpg 250w, wp-content/uploads/sites/13/2015/08/20150812_161557-150x150.jpg 150w, wp-content/uploads/sites/13/2015/08/20150812_161557-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=91.html" title="Citizens &#038; City Hall Monitor Sanitation in Belém">Citizens &#038; City Hall Monitor Sanitation in Belém</a></h5>
+
+										<p>This past week in the northern Brazilian city of Belém do Pará, we had the pleasure of commemorating the first official collaboration between a civil society group and local government to monitor city issues using Promise Tracker. During a 2-day<a href="index.html%3Fp=91.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=112.html" title="Recovering Play Spaces in Jardim Pantal">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/08/IMG_1770-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/08/IMG_1770-250x250.jpg 250w, wp-content/uploads/sites/13/2015/08/IMG_1770-150x150.jpg 150w, wp-content/uploads/sites/13/2015/08/IMG_1770-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=112.html" title="Recovering Play Spaces in Jardim Pantal">Recovering Play Spaces in Jardim Pantal</a></h5>
+
+										<p>On Saturday we returned to Jardim Pantanal on the outskirts of São Paulo to run a second workshop with leaders of the Residents Association, staff of the Alana Institute and local youth.  Our goal for the day was to develop a<a href="index.html%3Fp=112.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=121.html" title="Monitoring Paraty with the Nucleus for New Media">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/08/IMG_1616-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/08/IMG_1616-250x250.jpg 250w, wp-content/uploads/sites/13/2015/08/IMG_1616-150x150.jpg 150w, wp-content/uploads/sites/13/2015/08/IMG_1616-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=121.html" title="Monitoring Paraty with the Nucleus for New Media">Monitoring Paraty with the Nucleus for New Media</a></h5>
+
+										<p>This weekend we traveled to the city of Paraty on the coast of Rio de Janeiro to run a workshop with the Nucleus for Media, Art &amp; Technology and professors from the State University of Campinas (UNICAMP). Officially launched in<a href="index.html%3Fp=121.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=116.html" title="Councillors monitor WiFi Hotspots in São Paulo">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/08/ER-SP-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/08/ER-SP-250x250.jpg 250w, wp-content/uploads/sites/13/2015/08/ER-SP-150x150.jpg 150w, wp-content/uploads/sites/13/2015/08/ER-SP-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=116.html" title="Councillors monitor WiFi Hotspots in São Paulo">Councillors monitor WiFi Hotspots in São Paulo</a></h5>
+
+										<p>This week we returned to São Paulo to work with participatory councillors from 3 different regions of São Paulo to monitor projects included in Mayor Haddad&#8217;s goals plan for the 2013-2016 period. Rather than focusing on projects specific to their<a href="index.html%3Fp=116.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=56.html" title="Public parks and transportation in Belém">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_1234-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_1234-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_1234-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_1234-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=56.html" title="Public parks and transportation in Belém">Public parks and transportation in Belém</a></h5>
+
+										<p>We returned to the northeast this week to run a workshop in Belém do Pará with The Social Observatory of Belém. The group was fantastically diverse, including reps from the public prosecutor&#8217;s office, the secretary for the environment, the informal<a href="index.html%3Fp=56.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=62.html" title="Tracking sidewalk issues in Moema">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_1182-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_1182-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_1182-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_1182-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=62.html" title="Tracking sidewalk issues in Moema">Tracking sidewalk issues in Moema</a></h5>
+
+										<p>On Saturday we accompanied a group organized by the residents association in the São Paulo neighborhood of Moema. We gathered in a cake shop with an eclectic group including local business owners, participatory councilors, a representative from the local branch of city hall<a href="index.html%3Fp=62.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=59.html" title="Trash collection in Jardim Pantanal">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_1148-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_1148-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_1148-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_1148-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=59.html" title="Trash collection in Jardim Pantanal">Trash collection in Jardim Pantanal</a></h5>
+
+										<p>We teamed up with Instituto Alana this week to run a Promise Tracker workshop in a region of São Paulo called Jardim Pantanal, located about 40 miles out of the city center near the airport. Alana has had a presence in<a href="index.html%3Fp=59.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=65.html" title="Looking at local health facilities in Sé">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_1109-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_1109-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_1109-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_1109-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=65.html" title="Looking at local health facilities in Sé">Looking at local health facilities in Sé</a></h5>
+
+										<p>On Tuesday we ran a follow up session with participatory councillors from Sé region in downtown São Paulo to run a mini data collection campaign to present back to the council as an example of Promise Tracker in action. The group<a href="index.html%3Fp=65.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=53.html" title="Monitoring public bus stops in Ilhéus">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_1051-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_1051-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_1051-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_1051-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=53.html" title="Monitoring public bus stops in Ilhéus">Monitoring public bus stops in Ilhéus</a></h5>
+
+										<p>We had the pleasure of collaborating with Nossa Ilhéus on Thursday to debut Promise Tracker in the state of Bahia.  Working with a group of student activists, media makers, professors, and members of councils on education and entrepreneurship, we developed campaigns to<a href="index.html%3Fp=53.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=49.html" title="Assessing water quality in Ilhabela">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_0952-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_0952-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_0952-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_0952-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=49.html" title="Assessing water quality in Ilhabela">Assessing water quality in Ilhabela</a></h5>
+
+										<p>On Monday we teamed up with the staff and leadership of the Sustainable Ilhabela Institute to test out Promise Tracker on local sanitation issues. Just off the coast of the state of São Paulo, Ilhabela is home to about 30,000 year-round residents<a href="index.html%3Fp=49.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=68.html" title="Promise Tracker Intro at the Sustainable Cities Conference">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/PT_demo-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/PT_demo-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/PT_demo-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/PT_demo-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=68.html" title="Promise Tracker Intro at the Sustainable Cities Conference">Promise Tracker Intro at the Sustainable Cities Conference</a></h5>
+
+										<p>Nossa São Paulo and the Promise Tracker team traveled to Brasilia this week for the first international conference of the International Sustainable Cities network. There were reps from cities across the globe who gathered to share best practices from the 12 different focus<a href="index.html%3Fp=68.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=19.html" title="Promise Tracker launches in São Paulo">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/PT_launch-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/PT_launch-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/PT_launch-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/PT_launch-144x144.jpg 144w, wp-content/uploads/sites/13/2015/06/PT_launch-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=19.html" title="Promise Tracker launches in São Paulo">Promise Tracker launches in São Paulo</a></h5>
+
+										<p>On March 23, the Center for Civic Media and Rede Nossa São Paulo teamed up for the public launch of Promise Tracker and De Olho nas Metas.</p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div><div class="item">								<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=72.html" title="Intro to Promise Tracker with Comunitas">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_0870-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_0870-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_0870-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_0870-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=72.html" title="Intro to Promise Tracker with Comunitas">Intro to Promise Tracker with Comunitas</a></h5>
+
+										<p>On Friday we visited Comunitas to run an introductory workshop with the organization&#8217;s program staff and creators of the Brazilian civic app, Colab.re. The group created demo campaigns, discussed potential applications of the tool within the Comunitas network and explored some of the<a href="index.html%3Fp=72.html">[&#8230;]</a></p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=29.html" title="Monitoring Public Parks in Betim">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/betim-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/betim-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/betim-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/betim-144x144.jpg 144w, wp-content/uploads/sites/13/2015/06/betim-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=29.html" title="Monitoring Public Parks in Betim">Monitoring Public Parks in Betim</a></h5>
+
+										<p>On Thursday we traveled across Minas Gerais to work with leaders of Nossa Betim and students from a local technical school.</p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=25.html" title="Assessing Public Transportation in Belo Horizonte">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/bh_workshop-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/bh_workshop-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/bh_workshop-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/bh_workshop-144x144.jpg 144w, wp-content/uploads/sites/13/2015/06/bh_workshop-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=25.html" title="Assessing Public Transportation in Belo Horizonte">Assessing Public Transportation in Belo Horizonte</a></h5>
+
+										<p>We traveled to Belo Horizonte this week to introduce Promise Tracker to civil society group NossaBH and members of their network. </p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+															<div class="col-sm-3 latestnews-box">
+
+									<div class="latestnews-img">
+										<a href="index.html%3Fp=22.html" title="Monitoring São Luís">
+
+																							<img width="250" height="250" src="wp-content/uploads/sites/13/2015/06/IMG_0773-250x250.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="wp-content/uploads/sites/13/2015/06/IMG_0773-250x250.jpg 250w, wp-content/uploads/sites/13/2015/06/IMG_0773-150x150.jpg 150w, wp-content/uploads/sites/13/2015/06/IMG_0773-144x144.jpg 144w, wp-content/uploads/sites/13/2015/06/IMG_0773-174x174.jpg 174w" sizes="(max-width: 250px) 100vw, 250px" />											
+										</a>
+									</div>
+
+									<div class="latesnews-content">
+
+										<h5 class="latestnews-title"><a href="index.html%3Fp=22.html" title="Monitoring São Luís">Monitoring São Luís</a></h5>
+
+										<p>The Promise Tracker team made our first visit to the northeast region of Brazil this past week to run a workshop with members of Nossa São Luís in the capital of Maranhão. </p>
+
+									</div>
+
+								</div><!-- .latestnews-box"> -->
+
+							<div class="clear"></div></div>
+
+				    </div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="index.html#carousel-homepage-latestnews" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="index.html#carousel-homepage-latestnews" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+			</div>
+		</section>
+		<section class="focus" id="focus">
+
+
+
+<div class="container">
+
+
+
+
+
+	<!-- SECTION HEADER -->
+
+
+
+	<div class="section-header">
+
+
+
+
+
+
+
+		<!-- SECTION TITLE -->
+
+
+		<h2 class="dark-text">about</h2>
+
+
+
+		<h6>Promise Tracker is a citizen-monitoring platform designed to help communities track issues they care about and use that information to advocate for change with local government, institutions, or the press. </h6>		<br><h6 class="sub">More than a data collection platform, Promise Tracker is a civic process designed to gather groups of citizens to discuss critical issues in their communities, collect actionable information to better understand those issues, and engage in dialogue with local actors in order to develop solutions.</h6>	</div>
+
+</div> <!-- / END CONTAINER -->
+
+
+
+</section>  <!-- / END FOCUS SECTION --><section class="about-us" id="aboutus">
+	<div class="container">
+
+
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+
+			<!-- SECTION TITLE -->
+
+			<h2 class="white-text">Workshop map</h2>
+			<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+
+			<h6>Promise Tracker has been developed in partnership with a network of civil society partners in Brazil through a series of design and implementation workshops. For more information on partners and themes, see the map below.</h6>		</div><!-- / END SECTION HEADER -->
+
+</div> <!-- / END CONTAINER -->
+
+<div class="map-container">
+	<div id="workshop-stats">
+		<p class="stat-title">Cities</p>
+		<h2 class="stat" id="city-count"></h2>
+		<p class="stat-title">Workshops</p>
+		<h2 class="stat" id="workshop-count"></h2>
+		<p class="stat-title">participants</p>
+		<h2 class="stat" id="participant-count"></h2>
+	</div>
+	<iframe width='100%' height='640' frameborder='0' src='https://emreiser.cartodb.com/viz/c9c21a0e-e4fd-11e4-b267-0e018d66dc29/embed_map' allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+</div>
+</section> <!-- END ABOUT US SECTION -->
+
+<section class="testimonial" id="testimonials"><div class="container"><div class="section-header"><h2 class="dark-text">Design workshops</h2>	
+
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<div class="circle-image" style="background-image:url('wp-content/uploads/sites/13/2015/06/workshopimage.jpg');"></div>
+	</div>
+	<div class="col-md-9">
+<p>
+	Throughout 2014, the Promise Tracker team collaborated with partner organizations in Brazil to conduct a series of design workshops to guide the development and testing of the Promise Tracker tools. Working with Rede Nossa São Paulo in São Paulo and the Office of Strategic Priorities in Belo Horizonte, we gathered community leaders and participatory councillors to identify pressing local issues, test data collection processes, gather information in the community and present collected data back to key stakeholders.
+</p>
+</div>
+<br>
+<div class="row">
+	<div class="col-md-3">
+		<div class="circle-image" style="background-image: url('wp-content/uploads/sites/13/2015/06/IMG_1051-250x250.jpg');"></div>
+	</div>	
+	<div class="col-md-9">
+		<p>Following the development of the initial prototype of the Promise Tracker tools in March 2015, the Center for Civic Media has conducted workshops in cities throughout Brazil to pilot the process with civil society organizations, gather and integration ongoing feedback on the platform and methodology, and train groups of trainers to multiply workshops in their regions. The Promise Tracker tools are under active iteration. Check out the news section for updates from the field.</p>
+	</div>					
+</div>
+</section><section class="press" id="press">
+	<div class="container">
+
+
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+
+			<!-- SECTION TITLE -->
+
+			<h2 class="dark-text">Background</h2>
+
+		</div><!-- / END SECTION HEADER -->
+
+		<!-- SECTION CONTENT -->
+			
+		<div class="row">
+			<div class="col-md-6">
+				<div class="group-logos">						<img src="wp-content/uploads/sites/13/2015/06/CivicMedia_Logo_K_RGB.jpg">
+				</div>
+				<h6>
+					Promise Tracker is a project of the <a href="https://civic.mit.edu/" target="blank">Center for Civic Media</a> in collaboration with a network of Brazilian partners including <a href="https://www.nossasaopaulo.org.br/" target="blank"> Nossa São Paulo</a>, the <a href="https://promisetracker.org/www.osdebelem.org"> Social Observatory of Belém</a>, <a href="http://www.projetosolaaps.com.br/"> Projeto SOL</a>, the Laboratory for Innovation and Control in the Public Sector at the Federal University of Pará, and the <a href="https://promisetracker.org/colab.each.usp.br" target="blank"> CoLaboratory for Development and Participation</a> at the University of São Paulo.</br></br>
+
+The Center for Civic Media is a research group at the MIT Media Lab that works hand in hand with diverse communities to collaboratively create, design, deploy, and assess civic media tools and practices.We are inventors of new technologies that support and foster civic engagement and political action, we are a hub for the study of these technologies, and we coordinate community-based design processes locally in the Boston area, across the United States, and around the world.
+				</h6>
+			</div>
+			<div class="col-md-6 press-links">			
+				<h4>Press</h4>
+					<ul>
+<li><a href="http://g1.globo.com/pa/santarem-regiao/jornal-tapajos-2edicao/videos/t/edicoes/v/ministerio-publico-acompanha-atraves-de-app-a-situacao-da-merenda-escolar/5303683/" target="blank">Aplicativo é aliado de estudantes em Santarém nas denúncias de irregularidades</a>	
+</li>	
+<li><a href="http://g1.globo.com/pa/santarem-regiao/bom-dia-santarem/videos/t/edicoes/v/mpe-visita-escolas-de-santarem-para-vistoriar-qualidade-da-merenda-dos-alunos/5076292/" target="blank">Ministério Público de Educação visita escolas de Santarém para vistoriar qualidade da merenda dos alunos</a>	
+</li>					
+<li><a href="http://sao-paulo.estadao.com.br/noticias/geral,celular-e-arma-para-monitorar-prefeitura,1655365" target="blank">Celular é arma para monitorar Prefeitura</a></li>
+          <li><a href="http://www.nossasaoluis.org.br/site/2015/03/19/movimento-nossa-sao-luis-recebe-oficina-do-instituto-de-tecnologia-de-massachussetts-mit/" target="blank">Movimento Nossa São Luís recebe oficina do Instituto de Tecnologia de Massachussetts (MIT)</a></li>
+          <br>
+          <li><a href="http://money.cnn.com/2014/07/09/technology/innovation/campaign-promise-app/" target="blank">CNN article, "Making sure politicians make good on campaign promises? There's an app for that."</a></li>
+          <li><a href="https://soundcloud.com/rahulbot/promisetracker-wrko-interview" target="blank">Promise Tracker WRKO piece</a></li>
+          <li><a href="http://www.newsweek.com/fighting-corruption-one-app-time-latin-america-275188" target="blank">Newsweek article, "Fighting Corruption One App at a Time in Latin America"</a></li>
+					</ul>
+					
+					<h4>Background</h4>
+						<ul>
+							<li><a href="https://civic.mit.edu/blog/emreiser/promise-tracker-brazil-election-monitoring" target="blank">Promise Tracker launches civic monitoring campaigns across Brazil</a></li>
+          <li><a href="https://civic.mit.edu/blog/emreiser/piloting-promise-tracker-in-sao-paulo" target="blank">Piloting Promise Tracker in Sao Paulo</a></li>
+    	  	<li><a href="http://civic.mit.edu/blog/chelseabarabas/initial-reflections-on-promise-tracker" target="blank">Initial Reflections on Promise Tracker</a></li>
+    	      <li><a href="http://civic.mit.edu/blog/alexishope/workshop-stories" target="blank">Workshop Stories from São Paulo, Brazil</a></li>
+    	      <li><a href="http://civic.mit.edu/blog/erhardt/balancing-deep-and-wide-impacts-in-the-design-of-civic-tech" target="blank">Presentation at 2014 Digital Media and Learning Conference: Balancing Deep and Wide Impacts in the Design of Civic Tech</a></li>
+          <li><a href="http://www.ethanzuckerman.com/blog/2014/01/24/promise-tracker-and-monitorial-citizenship/" target="blank">Promise Tracker and Monitorial Citizenship</a></li>
+						</ul>
+				</div>
+<div class="center">
+	<br><br><br>
+	<p> Questions about the project? <a href="mailto:monitorando@media.mit.edu" target="_blank">Get in touch.</a>
+</div>
+
+	</div> <!-- / END CONTAINER -->
+</section> <!-- END ABOUT US SECTION -->
+
+
+<footer id="footer">
+
+<div class="container">
+
+
+</div> <!-- / END CONTAINER -->
+
+</footer> <!-- / END FOOOTER  -->
+
+
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script>		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=3.2.0'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=3.3.2'></script>
+<script type='text/javascript' src='wp-content/plugins/jquery-collapse-o-matic/js/collapse.js%3Fver=1.6.19'></script>
+<script type='text/javascript' src='wp-content/themes/zerif/js/bootstrap.min.js%3Fver=20120206'></script>
+<script type='text/javascript' src='wp-content/themes/zerif/js/map-stats.js%3Fver=20120206'></script>
+<script type='text/javascript' src='wp-content/themes/zerif/js/jquery.knob.js%3Fver=20120206'></script>
+<script type='text/javascript' src='wp-content/themes/zerif/js/zerif.js%3Fver=20120206'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tve_dash_front = {"ajaxurl":"https:\/\/promisetracker.org\/wp-admin\/admin-ajax.php","force_ajax_send":"","is_crawler":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.min.js%3Fver=2.2.17'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min.js%3Fver=5.4.2'></script>
+<script type="text/javascript">var tcb_post_lists=JSON.parse('[]');</script>
+
+
+</body>
+
+</html>
